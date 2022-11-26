@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		016A15D12916731D00F5B853 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 016A15D02916731D00F5B853 /* main.cpp */; };
+		016A15DA29167C0600F5B853 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016A15D929167C0600F5B853 /* SDL2.framework */; };
+		016A15DE29167C0900F5B853 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 016A15DD29167C0900F5B853 /* SDL2_image.framework */; };
+		01DE4DB02932469600E4AD87 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01DE4DAF2932469600E4AD87 /* SDL2_ttf.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,14 @@
 /* Begin PBXFileReference section */
 		016A15CD2916731D00F5B853 /* Labs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Labs; sourceTree = BUILT_PRODUCTS_DIR; };
 		016A15D02916731D00F5B853 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		016A15D929167C0600F5B853 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		016A15DD29167C0900F5B853 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../../Library/Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		01B0EF40291A637B0034524E /* snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow.png; sourceTree = "<group>"; };
+		01B0EF46291A66400034524E /* lab_2_variant_2_task_2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab_2_variant_2_task_2.cpp; sourceTree = "<group>"; };
+		01DE4DAF2932469600E4AD87 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
+		01DE4DB3293247BA00E4AD87 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		01F3D458291E69E900D5A08B /* lab_2_variant_2_task_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab_2_variant_2_task_1.cpp; sourceTree = "<group>"; };
+		01F98E47291B63E400328FA9 /* lab_3_variant_9.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab_3_variant_9.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +43,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				016A15DA29167C0600F5B853 /* SDL2.framework in Frameworks */,
+				01DE4DB02932469600E4AD87 /* SDL2_ttf.framework in Frameworks */,
+				016A15DE29167C0900F5B853 /* SDL2_image.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +57,7 @@
 			children = (
 				016A15CF2916731D00F5B853 /* Labs */,
 				016A15CE2916731D00F5B853 /* Products */,
+				016A15D72916771A00F5B853 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +72,32 @@
 		016A15CF2916731D00F5B853 /* Labs */ = {
 			isa = PBXGroup;
 			children = (
+				01B0EF3F291A621B0034524E /* assets */,
 				016A15D02916731D00F5B853 /* main.cpp */,
+				01B0EF46291A66400034524E /* lab_2_variant_2_task_2.cpp */,
+				01F98E47291B63E400328FA9 /* lab_3_variant_9.cpp */,
+				01F3D458291E69E900D5A08B /* lab_2_variant_2_task_1.cpp */,
 			);
 			path = Labs;
+			sourceTree = "<group>";
+		};
+		016A15D72916771A00F5B853 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01DE4DAF2932469600E4AD87 /* SDL2_ttf.framework */,
+				016A15DD29167C0900F5B853 /* SDL2_image.framework */,
+				016A15D929167C0600F5B853 /* SDL2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		01B0EF3F291A621B0034524E /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				01DE4DB3293247BA00E4AD87 /* Roboto-Light.ttf */,
+				01B0EF40291A637B0034524E /* snow.png */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +277,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +289,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
