@@ -26,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0103B1F72945F1BB000C9E09 /* lab_5_variant_3_task_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab_5_variant_3_task_1.cpp; sourceTree = "<group>"; };
 		016A15CD2916731D00F5B853 /* Labs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Labs; sourceTree = BUILT_PRODUCTS_DIR; };
 		016A15D02916731D00F5B853 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		016A15D929167C0600F5B853 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
@@ -77,6 +78,7 @@
 				01B0EF46291A66400034524E /* lab_2_variant_2_task_2.cpp */,
 				01F98E47291B63E400328FA9 /* lab_3_variant_9.cpp */,
 				01F3D458291E69E900D5A08B /* lab_2_variant_2_task_1.cpp */,
+				0103B1F72945F1BB000C9E09 /* lab_5_variant_3_task_1.cpp */,
 			);
 			path = Labs;
 			sourceTree = "<group>";
