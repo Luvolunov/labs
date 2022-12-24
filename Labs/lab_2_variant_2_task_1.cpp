@@ -4,10 +4,13 @@
 #include <SDL2_ttf/SDL_ttf.h>
 #include <SDL2_image/SDL_image.h>
 
+// Определяем константы для размеров окна
 const int windowWidth = 800;
 const int windowHeight = 600;
 
+// Размер клетки
 int size = 50;
+
 // Метод для расчёта размера клетки на графике
 int calculateSize(float minX, float maxX) {
     float absMin = abs(minX);
@@ -46,43 +49,43 @@ void drawCoordinatePlane(SDL_Renderer *renderer) {
     message_rect.y = windowHeight / 2 + 4;
     renderText(renderer, Roboto, Black, std::to_string(0), message_rect);
     
-    int x = 0;
+    int y = 0;
     for (float i = windowHeight / 2; i > 0; i -= size) {
         float textX = windowWidth / 2;
         float textY = i;
-        if (x) {
+        if (y) {
             // Рисуем числа по оси Y вверх
             message_rect.x = textX + 6;
             message_rect.y = textY - 8;
-            renderText(renderer, Roboto, Black, std::to_string(x), message_rect);
+            renderText(renderer, Roboto, Black, std::to_string(y), message_rect);
             
             // Рисуем числа по оси Y вниз
             message_rect.x = windowWidth - textX + 6;
             message_rect.y = windowHeight - textY - 8;
-            renderText(renderer, Roboto, Black, std::to_string(x), message_rect);
+            renderText(renderer, Roboto, Black, std::to_string(y), message_rect);
         }
-        ++x;
+        ++y;
         // Рисуем деления на оси Y
         SDL_RenderDrawLine(renderer, windowWidth / 2 - 2, i, windowWidth / 2 + 2, i);
         SDL_RenderDrawLine(renderer, windowWidth / 2 - 2, windowHeight - i, windowWidth / 2 + 2, windowHeight - i);
     }
     
-    int y = 0;
+    int x = 0;
     for (float i = windowWidth / 2; i > 0; i -= size) {
         float textX = i;
         float textY = windowHeight / 2;
-        if (y) {
+        if (x) {
             // Рисуем числа по оси X слева
             message_rect.x = textX - 4;
             message_rect.y = textY + 6;
-            renderText(renderer, Roboto, Black, std::to_string(y), message_rect);
+            renderText(renderer, Roboto, Black, std::to_string(x), message_rect);
             
             // Рисуем числа по оси X справа
             message_rect.x = windowWidth - textX - 4;
             message_rect.y = windowHeight - textY + 6;
-            renderText(renderer, Roboto, Black, std::to_string(y), message_rect);
+            renderText(renderer, Roboto, Black, std::to_string(x), message_rect);
         }
-        ++y;
+        ++x;
         // Рисуем деления на оси X
         SDL_RenderDrawLine(renderer, i, windowHeight / 2 - 2, i, windowHeight / 2 + 2);
         SDL_RenderDrawLine(renderer, windowWidth - i, windowHeight / 2 - 2, windowWidth - i, windowHeight / 2 + 2);
@@ -97,6 +100,7 @@ int main(int argc, char *argv[]) {
     std::cin >> minX;
     std::cout << "\nВведите максимальный x: ";
     std::cin >> maxX;
+    // Очерёдность инициализации взята из методички
     if (SDL_Init(SDL_INIT_VIDEO)) {
         fprintf(stderr,"Ошибка в SDL_Init: %s\n", SDL_GetError());
         return 1;
@@ -105,6 +109,9 @@ int main(int argc, char *argv[]) {
         fprintf(stderr,"Ошибка в SDL_ttf");
         return 1;
     }
+    // Убрал функции в конце, оставил только atexit
+    atexit(TTF_Quit);
+    atexit(IMG_Quit);
     atexit(SDL_Quit);
     SDL_Window *screen;
     screen = SDL_CreateWindow("Window", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, windowWidth, windowHeight, SDL_WINDOW_SHOWN);
@@ -140,7 +147,6 @@ int main(int argc, char *argv[]) {
     }
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(screen);
-    SDL_Quit();
-    IMG_Quit();
+
     return 0;
 }
