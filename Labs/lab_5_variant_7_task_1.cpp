@@ -1,5 +1,6 @@
 #include <iostream>
 
+// Вывод всех элементов массива
 template <typename T>
 void printArr(T arr[], const unsigned long length) {
     bool isFloat = typeid(float) == typeid(T);
@@ -11,13 +12,13 @@ void printArr(T arr[], const unsigned long length) {
     }
     printf("];\n");
 }
-
+// Получение максимального отрицательного элемента
 template <typename T>
 T getMaxNegative(T arr[], const unsigned long length) {
     T max = 0;
     for (unsigned long i = 0; i < length; ++i) {
-        if (max == 0 && arr[i] < 0) max = arr[i];
-        if (arr[i] < 0 && arr[i] > max) max = arr[i];
+        // Если элемент arr[i] отрицательный и больше max либо max равна нулю (означает, что отрицательные элементы ещё не вписывались), то записать значение в max
+        if (arr[i] < 0 && (arr[i] > max || max == 0)) max = arr[i];
     }
     return max;
 }
