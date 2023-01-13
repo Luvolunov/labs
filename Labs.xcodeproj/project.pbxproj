@@ -36,6 +36,8 @@
 		01B0EF46291A66400034524E /* lab_2_variant_2_task_2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab_2_variant_2_task_2.cpp; sourceTree = "<group>"; };
 		01DE4DAF2932469600E4AD87 /* SDL2_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_ttf.framework; path = ../../../../Library/Frameworks/SDL2_ttf.framework; sourceTree = "<group>"; };
 		01DE4DB3293247BA00E4AD87 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		01EFD62A297118B5000EEEFA /* lab_5_variant_7_task_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab_5_variant_7_task_1.cpp; sourceTree = "<group>"; };
+		01EFD62B29712677000EEEFA /* lab_5_variant_7_task_2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab_5_variant_7_task_2.cpp; sourceTree = "<group>"; };
 		01F3D458291E69E900D5A08B /* lab_2_variant_2_task_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab_2_variant_2_task_1.cpp; sourceTree = "<group>"; };
 		01F98E47291B63E400328FA9 /* lab_3_variant_9.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab_3_variant_9.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +83,8 @@
 				01F3D458291E69E900D5A08B /* lab_2_variant_2_task_1.cpp */,
 				0103B1F72945F1BB000C9E09 /* lab_5_variant_3_task_1.cpp */,
 				015D74412946033A00DC2A72 /* lab_5_variant_3_task_2.cpp */,
+				01EFD62A297118B5000EEEFA /* lab_5_variant_7_task_1.cpp */,
+				01EFD62B29712677000EEEFA /* lab_5_variant_7_task_2.cpp */,
 			);
 			path = Labs;
 			sourceTree = "<group>";
