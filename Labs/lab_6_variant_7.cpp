@@ -194,11 +194,11 @@ public:
         ss.str(""); // Сбрасываем строку
         ss.clear(); // Очищаем флаги
         
-        first += second; // Складываем числа
+        first += second;
         
-        ss << std::hex << first; // Переводим в hex
+        ss << std::hex << first;
         
-        return ss.str().c_str(); // Возвращаем результат
+        return ss.str().c_str();
     }
 };
 

@@ -27,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		0103B1F72945F1BB000C9E09 /* lab_5_variant_3_task_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab_5_variant_3_task_1.cpp; sourceTree = "<group>"; };
+		011C8439297290B500292DC5 /* lab_6_variant_7.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab_6_variant_7.cpp; sourceTree = "<group>"; };
 		015D74412946033A00DC2A72 /* lab_5_variant_3_task_2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab_5_variant_3_task_2.cpp; sourceTree = "<group>"; };
 		016A15CD2916731D00F5B853 /* Labs */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Labs; sourceTree = BUILT_PRODUCTS_DIR; };
 		016A15D02916731D00F5B853 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -85,6 +86,7 @@
 				015D74412946033A00DC2A72 /* lab_5_variant_3_task_2.cpp */,
 				01EFD62A297118B5000EEEFA /* lab_5_variant_7_task_1.cpp */,
 				01EFD62B29712677000EEEFA /* lab_5_variant_7_task_2.cpp */,
+				011C8439297290B500292DC5 /* lab_6_variant_7.cpp */,
 			);
 			path = Labs;
 			sourceTree = "<group>";
